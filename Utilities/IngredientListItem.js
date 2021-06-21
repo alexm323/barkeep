@@ -7,7 +7,8 @@ const IngredientListItem = ({ingredientName, ingredientAmount}) => {
         
           <List.Item
             title={ingredientName}
-            key={ingredientName}
+            description={ingredientAmount}
+            descriptionNumberOfLines={1}
           />
     )
       

@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
+import {StyleSheet} from 'react-native'
 import {Button, Card, Title, Paragraph, Avatar,List } from 'react-native-paper'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView} from 'react-native'
 import CocktailDetailsHeader from '../Utilities/CocktailDetailsHeader';
 import {filterIngredients} from '../helpers'
 import IngredientListItem from '../Utilities/IngredientListItem';
@@ -9,7 +10,7 @@ const CocktailDetails = ({drink,ingredients}) => {
 
     
   return (
-        <View>
+        <ScrollView >
         <CocktailDetailsHeader title="Drink Details" />
         <Card>
             <Card.Title title={drink.strDrink} subtitle={drink.strCategory} />
@@ -25,14 +26,16 @@ const CocktailDetails = ({drink,ingredients}) => {
 
         </Card>
         <List.Section>
-        {ingredients[0].map((element) => {
-            return <IngredientListItem ingredientName={element}/>
+            <List.Subheader>Ingredients List</List.Subheader>
+        {ingredients[0].map((element,i) => {
+            return <IngredientListItem ingredientName={element} ingredientAmount ={ingredients[1][i]} key={element}/>
         })}
         </List.Section>
         
-    </View>
+    </ScrollView>
     
   );
 }
 
 export default CocktailDetails
+  

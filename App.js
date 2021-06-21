@@ -4,14 +4,14 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import CocktailAPI from './CocktailAPI'
 import CocktailDetails from './Screens/CocktailDetails';
-import {absoluteCranberry, filterIngredients} from './helpers'
+import {absoluteCranberry, filterIngredients,brandyAlexander} from './helpers'
 
 
 export default function App() {
   
   return (
     <PaperProvider>
-      <CocktailDetails drink={absoluteCranberry} ingredients={filterIngredients(absoluteCranberry)}/>
+      <CocktailDetails drink={brandyAlexander} ingredients={filterIngredients(brandyAlexander)}/>
       <View style={styles.container}>
       <StatusBar style="auto" />
       
