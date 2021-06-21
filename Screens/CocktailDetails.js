@@ -1,9 +1,7 @@
 import React,{useState} from 'react'
-import {StyleSheet} from 'react-native'
 import {Button, Card, Title, Paragraph, Avatar,List } from 'react-native-paper'
-import { View, Text, ScrollView} from 'react-native'
-import CocktailDetailsHeader from '../Utilities/CocktailDetailsHeader';
-import {filterIngredients} from '../helpers'
+import {ScrollView} from 'react-native'
+
 import IngredientListItem from '../Utilities/IngredientListItem';
 
 const CocktailDetails = ({drink,ingredients}) => {
@@ -11,7 +9,6 @@ const CocktailDetails = ({drink,ingredients}) => {
     
   return (
         <ScrollView >
-        <CocktailDetailsHeader title="Drink Details" />
         <Card>
             <Card.Title title={drink.strDrink} subtitle={drink.strCategory} />
             <Card.Cover source={{ uri: drink.strDrinkThumb }} />
