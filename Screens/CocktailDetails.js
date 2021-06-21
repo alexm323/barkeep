@@ -1,15 +1,16 @@
-import React from 'react'
-import {Button, Card, Title, Paragraph, Avatar } from 'react-native-paper'
+import React,{useState} from 'react'
+import {Button, Card, Title, Paragraph, Avatar,List } from 'react-native-paper'
 import { View, Text } from 'react-native'
 import CocktailDetailsHeader from '../Utilities/CocktailDetailsHeader';
+import {filterIngredients} from '../helpers'
+import IngredientListItem from '../Utilities/IngredientListItem';
 
-const CocktailDetails = ({drink}) => {
-    console.log(drink)
+const CocktailDetails = ({drink,ingredients}) => {
 
-
+    
   return (
-    <View>
-        <CocktailDetailsHeader/>
+        <View>
+        <CocktailDetailsHeader title="Drink Details" />
         <Card>
             <Card.Title title={drink.strDrink} subtitle={drink.strCategory} />
             <Card.Cover source={{ uri: drink.strDrinkThumb }} />
@@ -21,8 +22,14 @@ const CocktailDetails = ({drink}) => {
             <Card.Actions>
                 <Button>Add Missing Ingredients to shopping List</Button>
             </Card.Actions>
-            
+
         </Card>
+        <List.Section>
+        {ingredients[0].map((element) => {
+            return <IngredientListItem ingredientName={element}/>
+        })}
+        </List.Section>
+        
     </View>
     
   );
