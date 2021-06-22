@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React,{useEffect,useState} from 'react';
+import { StyleSheet} from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import CocktailAPI from './CocktailAPI'
 import CocktailDetails from './Screens/CocktailDetails';
@@ -13,7 +13,17 @@ import CocktailDetailsHeader from './Utilities/CocktailDetailsHeader';
 const Stack = createStackNavigator();
 
 export default function App() {
-  
+  const [randomDrink,setRandomDrink] = useState('')
+  useEffect(() => {
+    async function getInitialCocktail(){
+      let randomDrinkData = await CocktailAPI.getRandomCocktail()
+      setRandomDrink(randomDrinkData)
+      // console.log(randomDrinkData)
+    }
+
+    getInitialCocktail();
+  }, [])
+
   return (
     <PaperProvider>
       <NavigationContainer>
@@ -26,8 +36,8 @@ export default function App() {
       }}
       >
 
-        <Stack.Screen name='Home' component={HomeScreen} options={{ headerTitle: 'Home' }}/>
-        <Stack.Screen name='CocktailDetails' component={CocktailDetailsScreen} options={{ headerTitle: 'Drink Details' }}/>
+        <Stack.Screen name='Home' component={HomeScreen} options={{ headerTitle: 'Home' }} />
+        <Stack.Screen name='CocktailDetails' component={CocktailDetailsScreen} initialParams={{drinkData:randomDrink}} options={{ headerTitle: 'Drink Details' }}/>
       </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

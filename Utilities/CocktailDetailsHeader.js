@@ -8,11 +8,17 @@ const CocktailDetailsHeader = ({scene,previous,navigation}) => {
     const handleFavorite = () => console.log('Searching');
   
     const _handleMore = () => console.log(scene);
-    console.log(previous)
+    // console.log(navigation.canGoBack())
     return (
     
       <Appbar.Header>
-        <Appbar.BackAction onPress={_goBack} />
+        {
+          navigation.canGoBack() ? 
+          <Appbar.BackAction onPress={() => navigation.goBack()} />
+          :
+          console.log('nowhere to go back to ')
+        }
+        
         <Appbar.Content title={scene.route.name}/>
         <Appbar.Action icon="star" onPress={_handleMore} />
 

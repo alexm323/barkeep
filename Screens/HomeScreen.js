@@ -1,13 +1,18 @@
 import React from 'react'
-import { View, Text,Button} from 'react-native'
+import { View, Text} from 'react-native'
+import {Button} from 'react-native-paper'
+import CocktailCard from '../Components/CocktailCard'
+import { brandyAlexander } from '../helpers'
 const HomeScreen = ({navigation}) => {
     return (
         <View>
-            <Text>Welcome Home</Text>
+            <CocktailCard navigation={navigation} drinkData={brandyAlexander}/>
             <Button
-            title="Cocktail Details"
-            onPress={() => navigation.navigate('CocktailDetails')}
-            />
+            mode='outlined'
+            onPress={() => navigation.navigate('CocktailDetails', {
+                drinkData: brandyAlexander
+            })}
+            >"Cocktail Details"</Button>
         </View>
     )
 }
