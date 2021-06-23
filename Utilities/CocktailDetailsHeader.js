@@ -3,12 +3,7 @@ import { Appbar } from 'react-native-paper'
 import { View, Text } from 'react-native'
 
 const CocktailDetailsHeader = ({scene,previous,navigation}) => {
-    const _goBack = () => console.log('Went back');
 
-    const handleFavorite = () => console.log('Searching');
-  
-    const _handleMore = () => console.log(scene);
-    // console.log(navigation.canGoBack())
     return (
     
       <Appbar.Header>
@@ -20,7 +15,7 @@ const CocktailDetailsHeader = ({scene,previous,navigation}) => {
         }
         
         <Appbar.Content title={scene.route.name}/>
-        <Appbar.Action icon="star" onPress={_handleMore} />
+        <Appbar.Action icon="star" onPress={() => console.log("Favorite")} />
 
       </Appbar.Header>
     

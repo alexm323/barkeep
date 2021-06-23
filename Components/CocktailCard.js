@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import {Card,Button} from 'react-native-paper'
 
 const CocktailCard = ({navigation,drinkData}) => {
@@ -10,7 +10,7 @@ const CocktailCard = ({navigation,drinkData}) => {
             <Card.Cover source={{ uri: drinkData.strDrinkThumb }} />
             <Card.Actions>
                 <Button
-                onPress={() => navigation.push('CocktailDetails')}
+                onPress={() => navigation.push('CocktailDetails',drinkData)}
                 >View Details</Button>
             </Card.Actions>
 

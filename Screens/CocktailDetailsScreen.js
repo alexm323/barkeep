@@ -1,11 +1,10 @@
 import React from 'react'
-import { absoluteCranberry,filterIngredients } from '../helpers'
-import { View, Text } from 'react-native'
+import { filterIngredients } from '../helpers'
 import CocktailDetails from './CocktailDetails'
 
 const CocktailDetailsScreen = ({route}) => {
 
-    console.log(route.params)
+    // console.log(route.params)
     const drinks = route.params.drinkData;
     const ingredients = filterIngredients(route.params.drinkData)
     return (
