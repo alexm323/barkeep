@@ -4,7 +4,7 @@ import CocktailDetails from './CocktailDetails'
 
 const CocktailDetailsScreen = ({route}) => {
 
-    // console.log(route.params)
+    console.log(route.params)
     const drinks = route.params.drinkData;
     const ingredients = filterIngredients(route.params.drinkData)
     return (

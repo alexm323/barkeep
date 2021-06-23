@@ -10,7 +10,7 @@ const CocktailCard = ({navigation,drinkData}) => {
             <Card.Cover source={{ uri: drinkData.strDrinkThumb }} />
             <Card.Actions>
                 <Button
-                onPress={() => navigation.push('CocktailDetails',drinkData)}
+                onPress={() => navigation.navigate('CocktailDetails',drinkData)}
                 >View Details</Button>
             </Card.Actions>
 

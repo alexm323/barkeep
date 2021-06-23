@@ -10,7 +10,6 @@ const HomeScreen = ({navigation,route}) => {
         async function getRandom(){
           let randomDrinkData = await CocktailAPI.getRandomCocktail()
           setRandomDrink(randomDrinkData)
-          setIsLoaded(true)
         }
     
         getRandom();
