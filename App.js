@@ -44,7 +44,7 @@ export default function App() {
           >
 
             <Stack.Screen name='Home' component={HomeScreen} options={{ headerTitle: 'Home' }} initialParams={{drinkData:randomDrink}}/>
-            <Stack.Screen name='CocktailDetails' component={CocktailDetailsScreen} initialParams={{drinkData:randomDrink}} options={{ headerTitle: 'Drink Details' }}/>
+            <Stack.Screen name='CocktailDetails' component={CocktailDetailsScreen} initialParams={{drinkData:randomDrink}} options={{ headerTitle: 'Drink Details' }} drinkDetails={randomDrink}/>
           </Stack.Navigator>
         </NavigationContainer>
       </>
