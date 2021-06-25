@@ -2,7 +2,7 @@ import React from 'react'
 import { filterIngredients } from '../helpers'
 import CocktailDetails from './CocktailDetails'
 
-const CocktailDetailsScreen = ({route,drinkDetails}) => {
+const CocktailDetailsScreen = ({route}) => {
 
     const drinks = route.params.drinkData;
     const ingredients = filterIngredients(route.params.drinkData)

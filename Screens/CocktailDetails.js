@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Button, Card, Title, Paragraph, Avatar,List } from 'react-native-paper'
+import {Button, Card, Title, Paragraph,List } from 'react-native-paper'
 import {ScrollView} from 'react-native'
 
 import IngredientListItem from '../Utilities/IngredientListItem';

@@ -1,1 +1,7 @@
-Working on the generate random drink functionality. I want to be able to pass the data for the drink down to the next screen that we are going to see 
+got the generate random function working 
+
+next up is to fill out the rest of the home page with filter drink buttons by alcohol and maybe the popular drinks buttons 
+
+
+
+

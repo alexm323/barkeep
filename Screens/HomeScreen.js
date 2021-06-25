@@ -3,7 +3,7 @@ import { View} from 'react-native'
 import {Button} from 'react-native-paper'
 import CocktailCard from '../Components/CocktailCard'
 import CocktailAPI from '../CocktailAPI'
-const HomeScreen = ({navigation,route}) => {
+const HomeScreen = ({navigation}) => {
     const [randomDrink,setRandomDrink] = useState('')
     const [count,setCount] = useState(0)
     useEffect(() => {
