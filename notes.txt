@@ -3,5 +3,4 @@ got the generate random function working
 next up is to fill out the rest of the home page with filter drink buttons by alcohol and maybe the popular drinks buttons 
 
 
-
-
+also need to implement the search feature and then figure out the component that I am going to want to display for the popular drinks section and figure out how to do the pagination when there ismore than 10 drinks on the page
