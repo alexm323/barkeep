@@ -10,6 +10,7 @@ const CocktailCard = ({navigation,drinkData}) => {
             <Card.Cover source={{ uri: drinkData.strDrinkThumb }} />
             <Card.Actions>
                 <Button
+                mode='contained'
                 onPress={() => navigation.navigate('CocktailDetails',{drinkData:drinkData})}
                 >View Details</Button>
             </Card.Actions>
