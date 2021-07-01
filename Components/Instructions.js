@@ -4,11 +4,11 @@ import {ScrollView} from 'react-native'
 
 import IngredientListItem from '../Utilities/IngredientListItem';
 
-const CocktailDetails = ({drink,ingredients}) => {
+const Instructions = ({drink,ingredients}) => {
 
     
   return (
-        <ScrollView >
+    <ScrollView >
         <Card>
             <Card.Title title={drink.strDrink} subtitle={drink.strCategory} />
             <Card.Cover source={{ uri: drink.strDrinkThumb }} />
@@ -34,5 +34,5 @@ const CocktailDetails = ({drink,ingredients}) => {
   );
 }
 
-export default CocktailDetails
+export default Instructions
   

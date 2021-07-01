@@ -4,3 +4,6 @@ next up is to fill out the rest of the home page with filter drink buttons by al
 
 
 also need to implement the search feature and then figure out the component that I am going to want to display for the popular drinks section and figure out how to do the pagination when there ismore than 10 drinks on the page
+
+
+adding in the tabs so i can separate when I have different screens like the search and the favorites 

@@ -12,7 +12,7 @@ const CocktailCard = ({navigation,drinkData}) => {
                 <Button
                 mode='contained'
                 onPress={() => navigation.navigate('CocktailDetails',{drinkData:drinkData})}
-                >View Details</Button>
+                >View {drinkData.strDrink} Details</Button>
             </Card.Actions>
 
         </Card>

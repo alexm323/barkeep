@@ -2,14 +2,12 @@ import React,{useEffect,useState} from 'react';
 import {Text} from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import CocktailAPI from './CocktailAPI'
-import {createStackNavigator} from '@react-navigation/stack'
-import CocktailDetailsScreen from './Screens/CocktailDetailsScreen';
 import { NavigationContainer } from '@react-navigation/native';
-
-import HomeScreen from './Screens/HomeScreen';
 import CocktailDetailsHeader from './Utilities/CocktailDetailsHeader';
-
-const Stack = createStackNavigator();
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import SearchScreen from './Screens/SearchScreen';
+import HomeStackNavigatorScreen from './Screens/HomeStackNavigatorScreen';
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -35,7 +33,8 @@ export default function App() {
         :
         <>
         <NavigationContainer>
-          <Stack.Navigator 
+          
+          <Tab.Navigator 
           initialRouteName="Home"
           screenOptions={{
             header: ({ scene, previous, navigation }) => (
@@ -44,10 +43,11 @@ export default function App() {
           }}
           >
             
-            <Stack.Screen name='Home' component={HomeScreen} options={{ headerTitle: 'Home' }} initialParams={{drinkData:randomDrink}}/>
-            <Stack.Screen name='CocktailDetails' component={CocktailDetailsScreen} initialParams={{drinkData:randomDrink}} options={{ headerTitle: 'Drink Details' }} drinkDetails={randomDrink}/>
+            <Tab.Screen name='HomeStack' component={HomeStackNavigatorScreen} options={{ headerTitle: 'HomeStackNavigator' }} initialParams={{drinkData:randomDrink}}/>
             
-          </Stack.Navigator>
+            <Tab.Screen name = 'SearchScreen' component={SearchScreen} options={{ headerTitle: 'Search' }}/>
+            
+          </Tab.Navigator>
         </NavigationContainer>
       </>
       }

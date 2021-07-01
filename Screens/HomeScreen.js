@@ -3,8 +3,7 @@ import { View} from 'react-native'
 import {Button} from 'react-native-paper'
 import CocktailCard from '../Components/CocktailCard'
 import CocktailAPI from '../CocktailAPI'
-import SearchInput from '../Components/SearchInput'
-import HomeTab from './HomeTab'
+
 const HomeScreen = ({navigation}) => {
     const [randomDrink,setRandomDrink] = useState('')
     const [count,setCount] = useState(0)
@@ -20,14 +19,13 @@ const HomeScreen = ({navigation}) => {
 
 
     return (
+        
         <View>
             <CocktailCard navigation={navigation} drinkData={randomDrink}/>
-            <SearchInput randomDrink={randomDrink}/>
             <Button
             mode='outlined'
             onPress={() => setCount(count+1)}
             >Generate Random</Button>
-            <HomeTab/>
         </View>
     )
 }

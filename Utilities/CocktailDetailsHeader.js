@@ -1,6 +1,5 @@
 import React from 'react'
 import { Appbar } from 'react-native-paper'
-import { View, Text } from 'react-native'
 
 const CocktailDetailsHeader = ({scene,previous,navigation}) => {
 

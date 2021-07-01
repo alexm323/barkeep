@@ -1,13 +1,13 @@
 import React from 'react'
 import { filterIngredients } from '../helpers'
-import CocktailDetails from './CocktailDetails'
+import Instructions from '../Components/Instructions'
 
 const CocktailDetailsScreen = ({route}) => {
 
     const drinks = route.params.drinkData;
     const ingredients = filterIngredients(route.params.drinkData)
     return (
-        <CocktailDetails drink={drinks} ingredients={ingredients}/>
+        <Instructions drink={drinks} ingredients={ingredients}/>
     )
 }
 
