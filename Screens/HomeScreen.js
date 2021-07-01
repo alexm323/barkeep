@@ -4,9 +4,11 @@ import {Button} from 'react-native-paper'
 import CocktailCard from '../Components/CocktailCard'
 import CocktailAPI from '../CocktailAPI'
 import SearchInput from '../Components/SearchInput'
+import HomeTab from './HomeTab'
 const HomeScreen = ({navigation}) => {
     const [randomDrink,setRandomDrink] = useState('')
     const [count,setCount] = useState(0)
+
     useEffect(() => {
         async function getRandom(){
           let randomDrinkData = await CocktailAPI.getRandomCocktail()
@@ -15,14 +17,17 @@ const HomeScreen = ({navigation}) => {
     
         getRandom();
       }, [count])
+
+
     return (
         <View>
             <CocktailCard navigation={navigation} drinkData={randomDrink}/>
-            <SearchInput/>
+            <SearchInput randomDrink={randomDrink}/>
             <Button
             mode='outlined'
             onPress={() => setCount(count+1)}
             >Generate Random</Button>
+            <HomeTab/>
         </View>
     )
 }

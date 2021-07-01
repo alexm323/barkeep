@@ -5,6 +5,7 @@ import CocktailAPI from './CocktailAPI'
 import {createStackNavigator} from '@react-navigation/stack'
 import CocktailDetailsScreen from './Screens/CocktailDetailsScreen';
 import { NavigationContainer } from '@react-navigation/native';
+
 import HomeScreen from './Screens/HomeScreen';
 import CocktailDetailsHeader from './Utilities/CocktailDetailsHeader';
 
@@ -42,9 +43,10 @@ export default function App() {
             ),
           }}
           >
-
+            
             <Stack.Screen name='Home' component={HomeScreen} options={{ headerTitle: 'Home' }} initialParams={{drinkData:randomDrink}}/>
             <Stack.Screen name='CocktailDetails' component={CocktailDetailsScreen} initialParams={{drinkData:randomDrink}} options={{ headerTitle: 'Drink Details' }} drinkDetails={randomDrink}/>
+            
           </Stack.Navigator>
         </NavigationContainer>
       </>
