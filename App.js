@@ -36,11 +36,7 @@ export default function App() {
           
           <Tab.Navigator 
           initialRouteName="Home"
-          screenOptions={{
-            header: ({ scene, previous, navigation }) => (
-              <CocktailDetailsHeader scene={scene} previous={previous} navigation={navigation} />
-            ),
-          }}
+          
           >
             
             <Tab.Screen name='HomeStack' component={HomeStackNavigatorScreen} options={{ headerTitle: 'HomeStackNavigator' }} initialParams={{drinkData:randomDrink}}/>
