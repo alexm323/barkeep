@@ -8,7 +8,7 @@ const SearchCocktailHeader = ({scene,previous,navigation}) => {
       <Appbar.Header>
         {
           navigation.canGoBack() ? 
-          <Appbar.BackAction onPress={() => navigation.goBack()} />
+          <Appbar.BackAction onPress={() => navigation.pop()} />
           :
           console.log('nowhere to go back to ')
         }

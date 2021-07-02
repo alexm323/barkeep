@@ -3,10 +3,13 @@ import { View } from 'react-native'
 import {Card,Button} from 'react-native-paper'
 
 const CocktailCard = ({navigation,drinkData}) => {
-    console.log(navigation)
     return (
-        <View >
-        <Card>
+        <View 
+        
+        >
+        <Card
+        mode="outlined"
+        >
             <Card.Title title={drinkData.strDrink} subtitle={drinkData.strCategory} />
             <Card.Cover source={{ uri: drinkData.strDrinkThumb }} />
             <Card.Actions>

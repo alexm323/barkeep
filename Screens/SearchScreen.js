@@ -7,6 +7,7 @@ const Stack = createStackNavigator();
 const SearchScreen = ({navigation}) => {
     return (
         <View>
+            
             <Stack.Navigator
                 screenOptions={{
                     header: ({ scene, previous, navigation }) => (
@@ -17,8 +18,7 @@ const SearchScreen = ({navigation}) => {
                             
                 <Stack.Screen name='Search' component={SearchInput} options={{ headerTitle: 'Search' }}/>
                 
-            </Stack.Navigator>
-            <Text>Welcome to the Search Screen</Text>
+            </Stack.Navigator>    
             <SearchInput navigation={navigation}/>
         </View>
     )
