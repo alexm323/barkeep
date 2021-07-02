@@ -11,7 +11,7 @@ const CocktailCard = ({navigation,drinkData}) => {
             <Card.Actions>
                 <Button
                 mode='contained'
-                onPress={() => navigation.navigate('CocktailDetails',{drinkData:drinkData})}
+                onPress={() => navigation.push('CocktailDetails',{drinkData:drinkData})}
                 >View {drinkData.strDrink} Details</Button>
             </Card.Actions>
 

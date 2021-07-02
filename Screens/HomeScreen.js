@@ -10,6 +10,7 @@ const HomeScreen = ({navigation}) => {
 
     useEffect(() => {
         async function getRandom(){
+          let popDrinks = await CocktailAPI.getPopularCocktails()
           let randomDrinkData = await CocktailAPI.getRandomCocktail()
           setRandomDrink(randomDrinkData)
         }

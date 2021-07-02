@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import HomeScreen from './HomeScreen';
 import CocktailDetailsScreen from './CocktailDetailsScreen';
 import CocktailDetailsHeader from '../Utilities/CocktailDetailsHeader';
+import CocktailAPI from '../CocktailAPI';
 const Stack = createStackNavigator();
 const HomeStackNavigatorScreen = () => {
     const [isLoaded, setIsLoaded] = useState(false)
