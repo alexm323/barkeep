@@ -3,6 +3,7 @@ import { View } from 'react-native'
 import {Card,Button} from 'react-native-paper'
 
 const CocktailCard = ({navigation,drinkData}) => {
+    console.log(navigation)
     return (
         <View >
         <Card>
@@ -11,7 +12,7 @@ const CocktailCard = ({navigation,drinkData}) => {
             <Card.Actions>
                 <Button
                 mode='contained'
-                onPress={() => navigation.push('CocktailDetails',{drinkData:drinkData})}
+                onPress={() => navigation.navigate('CocktailDetails',{drinkData:drinkData})}
                 >View {drinkData.strDrink} Details</Button>
             </Card.Actions>
 

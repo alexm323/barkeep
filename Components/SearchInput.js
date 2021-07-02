@@ -541,6 +541,7 @@ const drinks = {
 }
 
 const SearchInput = ({randomDrink,navigation}) => {
+  console.log(navigation)
   const [text,setText] = useState('')
   const [popularDrinks,setPopularDrinks] = useState(drinks)
   const [searchData, setSearchData] = useState('')
