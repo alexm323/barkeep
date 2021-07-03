@@ -2,12 +2,12 @@ import React,{useEffect,useState} from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
 import CocktailAPI from './CocktailAPI'
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import SearchScreen from './Screens/SearchScreen';
 import HomeStackNavigatorScreen from './Screens/HomeStackNavigatorScreen';
 import LoadingSpinner from './Utilities/LoadingSpinner';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -42,9 +42,25 @@ export default function App() {
           }}
           >
             
-            <Tab.Screen name='HomeStack' component={HomeStackNavigatorScreen} options={{ headerTitle: 'HomeStackNavigator' }} initialParams={{drinkData:randomDrink}}/>
+            <Tab.Screen 
+            name='Home' 
+            component={HomeStackNavigatorScreen} 
+            options={{
+               headerTitle: 'HomeStackNavigator',
+               tabBarIcon:"home" 
+            }} 
+            initialParams={{drinkData:randomDrink}}
+            />
             
-            <Tab.Screen name = 'SearchScreen' component={SearchScreen} options={{ headerTitle: 'Search' }}/>
+            <Tab.Screen 
+            name = 'Search' 
+            component={SearchScreen} 
+            options={{ 
+              headerTitle: 'Search',
+              tabBarIcon:"magnify" 
+            
+            }}
+            />
             
           </Tab.Navigator>
         </NavigationContainer>
