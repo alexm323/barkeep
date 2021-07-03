@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet,ImageBackground } from 'react-native'
-import {Circle} from 'react-native-animated-spinkit'
+import {Wander} from 'react-native-animated-spinkit'
+
 const LoadingSpinner = () => {
     return (
         <ImageBackground
@@ -9,7 +10,7 @@ const LoadingSpinner = () => {
       imageStyle={styles.imageStyle}
     > 
     <View style={styles.spinContainer}>
-              <Circle color='white' size={100}/>
+              <Wander color='white' size={200}/>
     </View>
   </ImageBackground>
     )

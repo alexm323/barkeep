@@ -1,9 +1,7 @@
 import React,{useEffect,useState} from 'react';
-import {Text,ImageBackground,View, StyleSheet} from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import CocktailAPI from './CocktailAPI'
 import { NavigationContainer } from '@react-navigation/native';
-import CocktailDetailsHeader from './Utilities/CocktailDetailsHeader';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SearchScreen from './Screens/SearchScreen';
 import HomeStackNavigatorScreen from './Screens/HomeStackNavigatorScreen';
