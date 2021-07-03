@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import {Text} from 'react-native';
+import {Text,ImageBackground,View, StyleSheet} from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import CocktailAPI from './CocktailAPI'
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,6 +7,8 @@ import CocktailDetailsHeader from './Utilities/CocktailDetailsHeader';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SearchScreen from './Screens/SearchScreen';
 import HomeStackNavigatorScreen from './Screens/HomeStackNavigatorScreen';
+import LoadingSpinner from './Utilities/LoadingSpinner';
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -22,6 +24,7 @@ export default function App() {
     }
 
     getInitialCocktail();
+    setIsLoaded(false)
   }, [])
 
   return (
@@ -29,7 +32,7 @@ export default function App() {
     <PaperProvider>
       {
       !isLoaded ? 
-        <Text>Loading</Text>
+        <LoadingSpinner/>
         :
         <>
         <NavigationContainer>
@@ -52,3 +55,5 @@ export default function App() {
     
   );
 }
+
+
