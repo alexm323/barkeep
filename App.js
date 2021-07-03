@@ -37,7 +37,9 @@ export default function App() {
           
           <Tab.Navigator 
           initialRouteName="Home"
-          
+          tabBarOptions={{
+            activeTintColor: '#6400ee',
+          }}
           >
             
             <Tab.Screen name='HomeStack' component={HomeStackNavigatorScreen} options={{ headerTitle: 'HomeStackNavigator' }} initialParams={{drinkData:randomDrink}}/>

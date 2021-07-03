@@ -7,6 +7,7 @@ also need to implement the search feature and then figure out the component that
 
 
 adding in the tabs so i can separate when I have different screens like the search and the favorites 
+add in load screen library 
 
 things to do
 
@@ -14,5 +15,5 @@ make the bottom action bar fancier
 add in the ability to filter by alcohol 
 fix the search feature 
 add in auth with firebase 
-add in load screen library 
+
 get logo 

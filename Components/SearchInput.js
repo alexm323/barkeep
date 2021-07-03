@@ -12,7 +12,7 @@ const SearchInput = ({navigation}) => {
   const [isLoaded,setIsLoaded] = useState(false)
 
     useEffect(() => {
-        async function getSearchedDrink(){
+        async function getPopDrinks(){
           try {
             let popDrinks = await CocktailAPI.getTenRandom();
             setPopularDrinks(popDrinks)
@@ -21,14 +21,35 @@ const SearchInput = ({navigation}) => {
             console.log(error)
           }    
         }
-        getSearchedDrink();
-      }, [])
+        async function searchDrink(name){
+          try{
+            
+            
+            let searchDrinks = await CocktailAPI.getCocktailByName(name)
+            if(searchDrinks.drinks !== null){
+              setPopularDrinks(searchDrinks)
+              setIsLoaded(true)
+            }else{
+              alert(`${name} is an invalid search string`)
+            }
+            
+            
+          }catch(error){
+
+            console.log(error)
+          }
+        }
+        
+        searchData ? searchDrink(text) : getPopDrinks();
+      }, [searchData])
     
+
     const handleSubmit = () => {
         
         // console.log(text)
         setSearchData(text)
-        setText('')
+        console.log(text)
+        
     }
 
     return (
