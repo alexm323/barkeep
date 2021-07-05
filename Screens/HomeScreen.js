@@ -3,6 +3,8 @@ import { View} from 'react-native'
 import {Button} from 'react-native-paper'
 import CocktailCard from '../Components/CocktailCard'
 import CocktailAPI from '../CocktailAPI'
+import FilterButtonList from '../Components/FilterButtonList'
+import FilterButton from '../Components/FilterButton'
 
 const HomeScreen = ({navigation}) => {
     const [randomDrink,setRandomDrink] = useState('')
@@ -27,6 +29,8 @@ const HomeScreen = ({navigation}) => {
             mode='outlined'
             onPress={() => setCount(count+1)}
             >Generate Random</Button>
+            <FilterButtonList/>
+            
         </View>
     )
 }
