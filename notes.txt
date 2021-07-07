@@ -17,3 +17,13 @@ fix the search feature
 add in auth with firebase 
 
 get logo 
+
+backend release engineers
+
+things to add
+
+error handling 
+server that is serving up the data 
+database which is what i really need 
+with models and node and all that
+pagination and lazy loading for the 10 random drinks to make the calls when a certain point is reached 

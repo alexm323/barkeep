@@ -28,7 +28,7 @@ const HomeScreen = ({navigation}) => {
             <Button
             mode='outlined'
             onPress={() => setCount(count+1)}
-            >Generate Random</Button>
+            >Generate Random23</Button>
             <FilterButtonList/>
             
         </View>
