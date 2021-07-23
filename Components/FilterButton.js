@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import { Button } from 'react-native-paper'
 
 const FilterButton = ({queryName}) => {
     return (
-        <Button
+        <TouchableOpacity
         mode='outlined'
-        >{queryName}</Button>
+        ><Button>{queryName}</Button></TouchableOpacity>
     )
 }
 
